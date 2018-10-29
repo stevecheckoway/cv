@@ -9,6 +9,11 @@
 \usepackage[pdfborder={0 0 0},breaklinks]{hyperref}
 \usepackage{fullpage}
 \usepackage{trace}
+\usepackage{xcolor}
+
+\definecolor{uicdarkblue}{RGB}{0,30,98}
+\renewcommand*\cvheadingfont{\Large\bfseries\color{uicdarkblue}}
+\renewcommand*\cvlistheadingfont{\large\bfseries\color{uicdarkblue}}
 
 % Use \privatetrue to typeset a bibliography containing private stuff.
 \newif\ifprivate
@@ -30,12 +35,14 @@
 % taken from hs's mary.tex, and tracing back to knuth.
 \def\dash---{\kern.16667em---\penalty\exhyphenpenalty\hskip.16667em\relax}
 
-\cvplace{University of Illinois at Chicago}
+\cvplace{Oberlin College}
 
 \newcommand*\personalline[2]{%
 	\leavevmode
-	\hbox to14pc{#1\hfil}%
-	\hskip2pc\hbox{#2}%
+	% XXX: Restore once I have an office.
+	% \hbox to14pc{#1\hfil}%
+	% \hskip2pc
+	\hbox{#2}%
 }
 
 \defaultbibliography{checkoway}
@@ -73,9 +80,9 @@
 \begin{cv}{Stephen Checkoway\hfill Curriculum Vit\ae}
 \begin{cvseclist}{Personal}
 	\item
-	\personalline{UIC Dept.\ of Computer Science}{Tel.: +1.312.413.2402}\\
-	\personalline{851 S. Morgan St., 1236 SEO}{Email: \href{mailto:sfc@uic.edu}{\sffamily sfc@uic.edu}}\\
-	\personalline{Chicago, IL 60607-7053}{Web: \url{https://www.cs.uic.edu/~s/}}
+	\personalline{}{Tel.: +1.425.238.2326}\\
+	\personalline{}{Email: \href{mailto:s@pahtak.org}{\sffamily s@pahtak.org}}\\
+	\personalline{}{Web: \url{https://checkoway.net}}
 \end{cvseclist}
 
 \iffalse
@@ -91,7 +98,8 @@
 \fi
 
 \begin{cvseclist}{Appointments}
-	\item[8/2015--present] Assistant Professor, University of
+	\item[7/2018--current] Affiliate Scholar, Oberlin College
+	\item[8/2015--7/2018] Assistant Professor, University of
 	Illinois at Chicago
 	\item[8/2012--7/2015] Assistant Research Professor, Johns Hopkins
 	University.
@@ -144,6 +152,7 @@
 	% exist, then TeX relaxes.
 	\InputIfFileExists{private.bib}\relax\relax
 	\pubs{Refereed papers}{
+		ghasemisharif-et-al:ssoff:security18,
 		martin-et-al:sentinel:iotdi18,
 		checkoway-et-al:juniper-dual-ec:ccs16,
 		rushanan-checkoway:run-dma:woot15,
@@ -173,6 +182,7 @@
 		checkoway:auditing:re08%
 	}
 	\pubs{Articles}{
+		checkoway-et-al:juniper-dual-ec:cacm,
 		checkoway-shacham-rescorla:texhack:login2010%
 	}
 \end{cvseclist}
