@@ -11,9 +11,11 @@
 \usepackage{trace}
 \usepackage{xcolor}
 
-\definecolor{uicdarkblue}{RGB}{0,30,98}
-\renewcommand*\cvheadingfont{\Large\bfseries\color{uicdarkblue}}
-\renewcommand*\cvlistheadingfont{\large\bfseries\color{uicdarkblue}}
+%\definecolor{uicdarkblue}{RGB}{0,30,98}
+\definecolor{oberlinred}{RGB}{207,16,47}
+\definecolor{oberlingold}{RGB}{255,184,29}
+\renewcommand*\cvheadingfont{\Large\bfseries\color{oberlinred}}
+\renewcommand*\cvlistheadingfont{\large\bfseries\color{oberlinred}}
 
 % Use \privatetrue to typeset a bibliography containing private stuff.
 \newif\ifprivate
@@ -39,9 +41,8 @@
 
 \newcommand*\personalline[2]{%
 	\leavevmode
-	% XXX: Restore once I have an office.
-	% \hbox to14pc{#1\hfil}%
-	% \hskip2pc
+	\hbox to13pc{#1\hfil}%
+	\hskip2pc
 	\hbox{#2}%
 }
 
@@ -82,9 +83,9 @@
 \begin{cv}{Stephen Checkoway\hfill Curriculum Vit\ae}
 \begin{cvseclist}{Personal}
 	\item
-	%\personalline{}{Tel.: +1.425.238.2326}\\
-	\personalline{}{Email: \email{stephen.checkoway@oberlin.edu}}\\
-	\personalline{}{Web: \url{https://checkoway.net}}
+	\personalline{Oberlin College Computer Science}{Tel.: +1 445.775.8364}\\
+	\personalline{10 N. Professor St.}{Email: \email{stephen.checkoway@oberlin.edu}}\\
+	\personalline{Oberlin, OH 44047-1019}{Web: \url{https://checkoway.net}}
 \end{cvseclist}
 
 \iffalse
@@ -100,8 +101,9 @@
 \fi
 
 \begin{cvseclist}{Appointments}
-	\item[11/2018--current] Research Specialist, Oberlin College
-	\item[7/2018--current] Affiliate Scholar, Oberlin College
+	\item[7/2019--current] Assistant Professor, Oberlin College
+	\item[11/2018--6/2019] Research Specialist, Oberlin College
+	\item[7/2018--6/2019] Affiliate Scholar, Oberlin College
 	\item[8/2015--7/2018] Assistant Professor, University of
 	Illinois at Chicago
 	\item[8/2012--7/2015] Assistant Research Professor, Johns Hopkins
@@ -155,6 +157,7 @@
 	% exist, then TeX relaxes.
 	\InputIfFileExists{private.bib}\relax\relax
 	\pubs{Refereed papers}{
+		crow-et-al:triton-testbed:cset19,
 		ghasemisharif-et-al:ssoff:security18,
 		martin-et-al:sentinel:iotdi18,
 		checkoway-et-al:juniper-dual-ec:ccs16,
@@ -224,21 +227,24 @@
 \begin{cvseclist}{Professional Activities}
 	\item[Editorial board] JETS 2013--present.
 	\item[\multilinelabel{Program committees}]
-	      USENIX Security 2014, 2015, 2016, 2017, 2019
+	      USENIX Security 2014, 2015, 2016, 2017, 2019, 2020
+	\item IEEE Security \& Privacy 2016, 2017, 2020
+	\item USENIX CSET 2013, 2019
 	\item IEEE LangSec 2018
-	\item IEEE Security \& Privacy 2016, 2017
 	\item WWW 2016, 2017
 	\item ACM CCS 2014, 2015
 	\item PASSAT 2014
 	\item ARES 2014
 	\item USENIX WOOT 2011, 2013
-	\item USENIX CSET 2013
 	\item DIMVA 2012
 	\item USENIX EVT/WOTE 2011, 2012
 \end{cvseclist}
 
 \begin{cvseclist}{Teaching}
-	\item[Courses at UIC] Languages and Automata\\
+	\item[At Oberlin] Systems Programming \\
+		Spring 2020\\
+		Fall 2019
+	\item[At UIC] Languages and Automata\\
 		Spring 2018
 		\url{https://www.cs.uic.edu/~s/teaching/cs301/2018-spring/}\\
 		Fall 2015
@@ -256,7 +262,7 @@
 		Spring 2016
 		\url{https://www.cs.uic.edu/~s/teaching/cs594/2016-spring/}
 
-	\item[Courses at JHU] Automata and Computation Theory\\
+	\item[At JHU] Automata and Computation Theory\\
 		Spring 2015
 		\url{https://www.cs.uic.edu/~s/teaching/cs271/2015-spring/}\\
 		Spring 2014
