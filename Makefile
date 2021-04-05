@@ -17,7 +17,7 @@ $(main).pdf: $(source) $(bibs)
 	done
 	$(LATEX) $(main)
 	$(LATEX) $(main)
-	rubber-info $(main)
+	#rubber-info $(main)
 
 clean:
 	$(RM) $(addprefix $(main).,aux log pdf out) $(wildcard bu*.aux) $(wildcard bu*.bbl) $(wildcard bu*.blg)
