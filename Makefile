@@ -8,7 +8,7 @@ bibs := $(wildcard *.bib)
 all: $(main).pdf
 
 $(main).pdf: $(source) $(bibs)
-	latexmk $(main)
+	latexmk -pdf $(main)
 
 clean:
-	latexmk -C $(main)
+	latexmk -pdf -C $(main)
